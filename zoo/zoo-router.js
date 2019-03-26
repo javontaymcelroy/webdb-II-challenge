@@ -12,7 +12,6 @@ const knexConfig = {
 const db = knex(knexConfig);
 
 router.get('/', (req, res) => {
-  // returns a promise that resolves to all records in the table
   db('zoos')
     .then(zoos => {
       res.status(200).json(zoos);
